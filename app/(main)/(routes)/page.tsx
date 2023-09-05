@@ -1,10 +1,13 @@
 import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
+import { UserButton } from '@clerk/nextjs'
 
 export default function Home() {
   return (
     <>
-      <div className="">this is a protected routes</div>
+      <div className="">
+        <UserButton afterSignOutUrl="/" />
+      </div>
     </>
   )
 }
