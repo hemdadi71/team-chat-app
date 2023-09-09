@@ -40,7 +40,7 @@ const ServerHeader = ({ server, role }: ServerHeaderProps) => {
         {isModerator && (
           <DropdownMenuItem
             onClick={() => onOpen('invite', { server })}
-            className="text-indigo-600 outline-none hover:bg-neutral-900 rounded-sm flex items-center dark:text-indigo-400 px-3 py-2 text-sm cursor-pointer">
+            className="text-indigo-600 outline-none dark:hover:bg-neutral-800 hover:bg-neutral-200 rounded-sm flex items-center dark:text-indigo-400 px-3 py-2 text-sm cursor-pointer">
             Invite People
             <UserPlus className="h-4 w-4 ml-auto" />
           </DropdownMenuItem>
@@ -48,7 +48,7 @@ const ServerHeader = ({ server, role }: ServerHeaderProps) => {
         {isAdmin && (
           <DropdownMenuItem
             onClick={() => onOpen('editServer', { server })}
-            className="flex items-center outline-none hover:bg-neutral-900 rounded-sm px-3 py-2 text-sm cursor-pointer">
+            className="flex items-center outline-none dark:hover:bg-neutral-800 hover:bg-neutral-200 rounded-sm px-3 py-2 text-sm cursor-pointer">
             Server Settings
             <Settings className="h-4 w-4 ml-auto" />
           </DropdownMenuItem>
@@ -56,7 +56,7 @@ const ServerHeader = ({ server, role }: ServerHeaderProps) => {
         {isAdmin && (
           <DropdownMenuItem
             onClick={() => onOpen('members', { server })}
-            className="flex items-center px-3 py-2 text-sm outline-none hover:bg-neutral-900 rounded-sm cursor-pointer">
+            className="flex items-center px-3 py-2 text-sm outline-none dark:hover:bg-neutral-800 hover:bg-neutral-200 rounded-sm cursor-pointer">
             Manage Members
             <Users className="h-4 w-4 ml-auto" />
           </DropdownMenuItem>
@@ -64,7 +64,7 @@ const ServerHeader = ({ server, role }: ServerHeaderProps) => {
         {isModerator && (
           <DropdownMenuItem
             onClick={() => onOpen('createChannel', { server })}
-            className="flex items-center px-3 py-2 text-sm outline-none hover:bg-neutral-900 rounded-sm cursor-pointer">
+            className="flex items-center px-3 py-2 text-sm outline-none dark:hover:bg-neutral-800 hover:bg-neutral-200 rounded-sm cursor-pointer">
             Create Channel
             <PlusCircle className="h-4 w-4 ml-auto" />
           </DropdownMenuItem>
@@ -73,7 +73,7 @@ const ServerHeader = ({ server, role }: ServerHeaderProps) => {
         {isAdmin && (
           <DropdownMenuItem
             onClick={() => onOpen('deleteServer', { server })}
-            className="flex items-center px-3 py-2 text-sm outline-none hover:bg-neutral-900 rounded-sm cursor-pointer text-rose-500">
+            className="flex items-center px-3 py-2 text-sm outline-none dark:hover:bg-neutral-800 hover:bg-neutral-200 rounded-sm cursor-pointer text-rose-500">
             Delete Server
             <Trash className="h-4 w-4 ml-auto" />
           </DropdownMenuItem>
@@ -81,7 +81,7 @@ const ServerHeader = ({ server, role }: ServerHeaderProps) => {
         {!isAdmin && (
           <DropdownMenuItem
             onClick={() => onOpen('leaveServer', { server })}
-            className="flex items-center px-3 py-2 text-sm outline-none hover:bg-neutral-900 rounded-sm cursor-pointer">
+            className="flex items-center px-3 py-2 text-sm outline-none dark:hover:bg-neutral-800 hover:bg-neutral-200 rounded-sm cursor-pointer">
             Leave Server
             <LogOut className="h-4 w-4 ml-auto" />
           </DropdownMenuItem>
